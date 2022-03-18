@@ -1,0 +1,19 @@
+musicas = [
+    {"titulo": "thunderstruck", "tocou": 3},
+    {"titulo": "one", "tocou": 4},
+    {"titulo": "keep the faith", "tocou": 2},
+    {"titulo": "Blaze of glory", "tocou": 6}
+]
+print(max(musicas, key=lambda musica: musica['tocou']))
+# Resposta: {'titulo': 'Blaze of glory', 'tocou': 6}
+
+print(min(musicas, key=lambda musica: musica['tocou']))
+# Resposta: {'titulo': 'keep the faith', 'tocou': 2}
+
+# Desafio - > Imprima somente o titulo da musica mais e menos tocada
+mais = (max(musicas, key=lambda musica: musica['tocou'])['titulo'])
+print(f"A musica mais tocada é {mais}")
+# Resposta: A musica mais tocada é Blaze of glory
+menos = (min(musicas, key=lambda musica: musica['tocou'])['titulo'])
+print(f"A musica menos tocada é {menos}")
+# Resposta: A música menos tocada é keep the faith
